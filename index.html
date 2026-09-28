@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title>
 
-    <link rel="shortcut icon" href="./assets/icons/Group.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/icons/favicon.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="./variables.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./utility.css">
 
     <script src="./script.js" defer></script>
     <script src="./templates.js" defer></script>
 </head>
 
-<body>
+<body onload="init()">
     <header class="site-headline">
         <img class="site-headline__logo" src="./assets/icons/logo.svg" alt="Fotogram">
     </header>
@@ -25,31 +26,11 @@
             Dein persönliches Fotoalbum
         </h1>
 
-        <section class="picture-preview-section" id="picturePreviewSection">
-            <div class="picture-preview-card" id="picturePreviewCard">
-                <!-- <img src="./assets/img/fjord.jpg" alt="icy fjord"> -->
-            </div>
+        <ul class="picture-gallery" id="pictureGallery">
+        </ul>
 
-            <div class="picture-preview-card" id="picturePreviewCard">
-                <!-- <img src="./assets/img/fjord.jpg" alt="icy fjord"> -->
-            </div>
-
-            <div class="picture-preview-card" id="picturePreviewCard">
-                <!-- <img src="./assets/img/fjord.jpg" alt="icy fjord"> -->
-            </div>
-
-            <div class="picture-preview-card" id="picturePreviewCard">
-                <!-- <img src="./assets/img/fjord.jpg" alt="icy fjord"> -->
-            </div>
-
-            <div class="picture-preview-card" id="picturePreviewCard">
-                <!-- <img src="./assets/img/fjord.jpg" alt="icy fjord"> -->
-            </div>
-
-            <div class="picture-preview-card" id="picturePreviewCard">
-                <!-- <img src="./assets/img/fjord.jpg" alt="icy fjord"> -->
-            </div>
-        </section>
+        <dialog class="photo-overlay" id="photoOverlay">
+        </dialog>
     </main>
 
     <footer class="site-footer">
