@@ -8,15 +8,15 @@ function getPhotoCardTemplate(picture, index) {
             `;
 }
 
-function getPhotoOverlayTemplate(index) {
+function getPhotoOverlayTemplate(picture, index) {
     return `
             <header>
-                <h2 class="photo-overlay__title">Test</h2>
+                <h2 class="photo-overlay__title">${picture.title}</h2>
                 <button class="photo-overlay__close-btn" onclick="closePhotoOverlay()" aria-label="Schließen">
                     <img src="./assets/icons/close.svg" alt="">
                 </button>
             </header>
-            <img class="photo-overlay__img" src="${picturesArray[index].src}" alt="${picturesArray[index].alt}">
+            <img class="photo-overlay__img" src="${picture.src}" alt="${picture.alt}">
             <footer>
                 <button onclick="showPreviousPhoto(${index})" class="photo-overlay__nav-btn" aria-label="Vorheriges Foto">
                     <img src="./assets/icons/prev.svg" alt="">
