@@ -2,7 +2,7 @@ function getPhotoCardTemplate(picture, index) {
     return `
             <li>
                 <button class="photo-card" onclick="openPhotoOverlay(${index})">
-                    <img class="photo-card__img" src="${picture.src}" alt="${picture.alt}">
+                    <img ${index >=4 ? 'loading="lazy"' : ''} class="photo-card__img" src="${picture.src}" alt="${picture.alt}">
                 </button>
             </li>
             `;
